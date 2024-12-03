@@ -4,8 +4,8 @@ import sys
 def main():
     sys.stdout.write("$ ")
 
-    input()
-    print("invalid_command: not found")
+    command = input()
+    print(f"{command}: not found")
 
 
 if __name__ == "__main__":
