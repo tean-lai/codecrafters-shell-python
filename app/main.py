@@ -13,8 +13,11 @@ def main():
                 print()
             else:
                 print(" ".join(line[1:]))
-        elif line[0] == "type" and line[1] in builtins:
-            print(f"{line[1]} is a shell builtin")
+        elif line[0] == "type":
+            if line[1] in builtins:
+                print(f"{line[1]} is a shell builtin")
+            else:
+                print(f"{line[1]}: not found")
         else:
             print(f"{line[0]}: not found")
 
