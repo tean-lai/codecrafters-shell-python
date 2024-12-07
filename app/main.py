@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+    builtins = ["echo", "exit"]
     while True:
         sys.stdout.write("$ ")
         line = input().split()
@@ -12,6 +13,8 @@ def main():
                 print()
             else:
                 print(" ".join(line[1:]))
+        elif line[0] == "type" and line[1] in builtins:
+            print(f"{line[1]} is a shell builtin")
         else:
             print(f"{line[0]}: not found")
 
