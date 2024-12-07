@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    builtins = ["echo", "exit"]
+    builtins = ["echo", "exit", "type"]
     while True:
         sys.stdout.write("$ ")
         line = input().split()
